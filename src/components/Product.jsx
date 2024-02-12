@@ -18,6 +18,8 @@ const Product = ({ title, image, price, category, description }) => {
 
 // validate props to determine what type of data it is and if it is required.
 Product.propTypes = {
+  // shortcuts
+  // ptar, ptsr, ptnr, ptar
   title: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
   price: PropTypes.any.isRequired,
