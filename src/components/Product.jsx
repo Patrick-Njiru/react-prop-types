@@ -7,10 +7,10 @@ const Product = ({ title, image, price, category, description }) => {
   return (
     <div className='card bg-secondary text-light col-sm-4 col-md-3 mx-3 shadow py-3'>
       <h4 className='card-title my-2'>{title}</h4>
-      <img src={image.url} alt={title} className='card-image img-fluid rounded my-2' />
+      <img src={image.url} alt={title} className='card-image img-fluid rounded my-2' style={{height: '250px'}} />
       <h6 className='my-2'>$ {price}</h6>
       <h5 className='my-2'>{category}</h5>
-      <p className='my-2'>{description}</p>
+      <details title='description' className='my-2'>{description}</details>
     </div>
   )
 }
@@ -27,7 +27,7 @@ Product.propTypes = {
 // method 1 of setting default values for missing prop values from the fetched data
 Product.defaultProps = {
   title: 'Default Title',
-  image: { url: 'https://www.placehold.co/200' },
+  image: { url: 'https://www.placehold.co/250' },
   price: 'Default Price',
   category: 'Default Category',
   description: 'Default Description',
