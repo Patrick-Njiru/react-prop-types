@@ -5,9 +5,9 @@ const Product = ({ title, image, price, category, description }) => {
   // const desc = description || title
   
   return (
-    <div className='card bg-secondary text-light col-sm-4 col-md-3 mx-3 shadow py-3'>
+    <div className='card bg-secondary text-light col-6 col-sm-5 col-md-3 mx-3 shadow py-3'>
       <h4 className='card-title my-2'>{title}</h4>
-      <img src={image.url} alt={title} className='card-image img-fluid rounded my-2' style={{height: '250px'}} />
+      <img src={image.url} alt={title} className='card-image img-fluid rounded my-2' style={{maxHeight: '250px'}} />
       <h6 className='my-2'>$ {price}</h6>
       <h5 className='my-2'>{category}</h5>
       <details title='description' className='my-2'>{description}</details>
